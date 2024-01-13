@@ -15,7 +15,7 @@ export class AppComponent implements OnInit{
   public msg: string = "";
 
   ngOnInit() {
-    this.socket = new WebSocket('wss://localhost:44385/board2');
+    this.socket = new WebSocket('wss://board-game-api-production.up.railway.app/board');
 
     this.socket.addEventListener('open', (event) => {
       this.title = 'Connected to WebSocket!';
